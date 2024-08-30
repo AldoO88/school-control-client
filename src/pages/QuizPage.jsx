@@ -1,9 +1,25 @@
+import { useParams } from "react-router-dom";
+import QuizLynn from "../components/QuizLynn";
+
+
 
 
 const QuizPage = () => {
+
+  const { category } = useParams();
+
+
   return (
     <div>
-      <h1>Quiz Page</h1>
+    {
+      category === 'Lynn'
+      ? <QuizLynn/>
+      : category === 'Peter'
+      ? <h1>Quiz de Peter</h1>
+      : <></>
+      
+    }
+      
     </div>
   )
 }
