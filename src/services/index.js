@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 let baseUrl = import.meta.env.NODE_ENV === 'production' 
-  ?  'https://school-control-server.onrender.com'
+  ?  import.meta.env.BASE_URL 
   : 'http://localhost:5005'
 
 const service = axios.create({
