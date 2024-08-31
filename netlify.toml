@@ -1,8 +1,0 @@
-[build]
-  command = "npm install --include=dev && npm run build"
-  publish = "dist"
-  environment = { MODE_ENV = "production" }
-
-
-[context.production.environment]
-  NODE_VERSION = "20"
