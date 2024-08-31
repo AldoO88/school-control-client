@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-let baseUrl = import.meta.env.NODE_ENV === 'production' 
-  ?  import.meta.env.BASE_URL 
+let baseUrl = import.meta.env.VITE_MODE_ENV === 'production' 
+  ?  import.meta.env.VITE_API_URL 
   : 'http://localhost:5005'
 
 const service = axios.create({
