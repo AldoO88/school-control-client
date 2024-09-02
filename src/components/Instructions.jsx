@@ -1,4 +1,4 @@
-const Instructions = ({ title1, text, title2, instructions, text2, setActiveQuiz}) => { 
+const Instructions = ({ title1, text, title2, instructions, text2, options, setActiveQuiz}) => { 
     return (
       <div className="w-full sm:w-2/2">
       <div className="relative h-full ml-0 md:mr-10">
@@ -13,7 +13,11 @@ const Instructions = ({ title1, text, title2, instructions, text2, setActiveQuiz
               <h2 className='font-bold text-lg'>{title2}</h2>
               <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">------------</p>
               <p><span className='font-bold text-lg'>Instrucciones:  </span><span>{instructions}</span></p>
-              <div className='flex flex-row justify-evenly m-2 font-bold'><span>1  Casi Nunca</span><span>2  Rara vez</span><span>3  A veces</span><span>4   Frecuentemente</span><span>5  Casi siempre</span></div>
+              <div className='flex flex-row justify-evenly m-2 font-bold'>
+                {options.map((option, index) => (
+                  <span key={index}>{option}</span>
+                ))}
+              </div>
               <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">------------</p>
               <h1 className='font-bold my-10'>{text2}</h1>
               <button 

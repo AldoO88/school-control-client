@@ -1,21 +1,23 @@
 import { useParams } from "react-router-dom";
 import QuizLynn from "../components/QuizLynn";
-
-
-
+import { testLynn } from "../quiz/tests";
+import { testPeter } from "../quiz/testPeter";
 
 const QuizPage = () => {
-
   const { category } = useParams();
-
-
   return (
     <div>
     {
       category === 'Lynn'
-      ? <QuizLynn/>
+      ? <QuizLynn
+          test={testLynn}
+          category={category}
+        />
       : category === 'Peter'
-      ? <h1>Quiz de Peter</h1>
+      ? <QuizLynn
+          test={testPeter}
+          category={category}
+        />
       : <></>
       
     }

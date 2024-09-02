@@ -36,10 +36,10 @@ const Navbar = () => {
           <>
             <section className="flex flex-row justify-start ml-28 space-x-4 w-1/3">
               <Link className='inline-flex items-center' to='/'>
-               <button className="btn-nav">Inicio</button>
+              <button className="btn-nav">Inicio</button>
               </Link>
               <Link className='inline-flex items-center' to='/tests'>
-                <button className="btn-nav">Encuestas</button>
+                <button className="btn-nav">Diagnóstico</button>
               </Link>
             </section>
             <section className="flex flex-row justify-evenly space-x-4 w-1/3">

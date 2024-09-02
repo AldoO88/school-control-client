@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Results = ({ answers }) => {
-  const [loadAnswers, setLoadAnswers] = useState(answers);
+
   const [result, setResult] = useState("");
 
   const visualQuestions = [1, 5, 9, 10, 11, 16, 17, 22, 26, 27, 32, 36];
   const auditivoQuestions = [2, 3, 12, 13, 15, 19, 20, 23, 24, 28, 29, 33];
-  const kinestesicoQuestions = [4, 6, 7, 8, 14, 18, 21, 25, 30, 31, 33, 34, 35];
+  const kinestesicoQuestions = [4, 6, 7, 8, 14, 18, 21, 25, 30, 31, 34, 35];
 
   const addTotal = (questions) => {
     return questions.reduce((acc, questionNumber) => {
-      const answer = loadAnswers[questionNumber];
+      const answer = answers[questionNumber];
       if (!answer) {
         return acc;
       }
@@ -18,7 +19,7 @@ const Results = ({ answers }) => {
     }, 0);
   }
 
-  const calculateResult = () => {
+  const calculateResult = useCallback(() => {
     const visualTotal = addTotal(visualQuestions);
     const auditivoTotal = addTotal(auditivoQuestions);
     const kinestesicoTotal = addTotal(kinestesicoQuestions);
@@ -32,12 +33,12 @@ const Results = ({ answers }) => {
     } else {
       return "Mixto";
     }
-  };
+  }, [answers]);
 
   useEffect(() => {
     const finalResult = calculateResult();
     setResult(finalResult);
-  }, [loadAnswers]);
+  }, [answers, calculateResult]);
 
   const renderTableRows = (questions) => {
     return questions.map((questionNumber) => (
@@ -46,7 +47,7 @@ const Results = ({ answers }) => {
           {questionNumber}
         </td>
         <td colSpan="2" className="border-2 border-indigo-500 text-center">
-          {loadAnswers[questionNumber]?.selectedOption.substr(0, 1) ||
+          {answers[questionNumber]?.selectedOption.substr(0, 1) ||
             "No respondida"}
         </td>
       </tr>
@@ -137,6 +138,14 @@ const Results = ({ answers }) => {
             ------------
           </p>
           <h2 className="font-bold text-3xl text-center text-green-600">{`${result}!!!`}</h2>
+          <Link to='/tests'>
+          <button 
+            type='button'
+            className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+          >
+            Salir
+          </button>
+          </Link>
 
         </div>
       </div>
