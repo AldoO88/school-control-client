@@ -24,7 +24,7 @@ function App() {
               <Listbar/>
             </div>
         }
-        <div className='flex items-start justify-center h-screen w-full px-5 m-10 sm:px-0'>
+        <div className='flex items-start justify-center h-full w-full px-5 m-10 sm:px-0'>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/tests' element={ <IsPrivate><Tests/></IsPrivate> } />
