@@ -21,8 +21,7 @@ const ResultPeter = ({ answers }) => {
     2, 4, 6, 11, 15, 17, 21, 23, 25, 29, 33, 45, 50, 54, 60, 64, 66, 71, 78, 80,
   ];
   const pragmaticQuestions = [
-    1, 8, 12, 14, 22, 24, 30, 39, 40, 47, 52, 53, 56, 57, 59, 62, 68, 72, 73,
-    76,
+    1, 8, 12, 14, 22, 24, 30, 39, 40, 47, 52, 53, 56, 57, 59, 62, 68, 72, 73, 76,
   ];
 
   useEffect(() => {
@@ -64,6 +63,30 @@ const ResultPeter = ({ answers }) => {
       learningStyle = "TEÓRICO";
     } else if (maxCount === pragmaticCount) {
       learningStyle = "PRAGMÁTICO";
+    } else if (
+      activeCount === reflectiveCount 
+    ) {
+      learningStyle = "ACTIVO Y REFLEXIVO";
+    } else if (
+      activeCount === theoreticalCount 
+    ) {
+      learningStyle = "ACTIVO Y TEÓRICO";
+    } else if (
+      activeCount === pragmaticCount 
+    ) {
+      learningStyle = "ACTIVO Y PRAGMÁTICO";
+    } else if (
+      reflectiveCount === theoreticalCount 
+    ) {
+      learningStyle = "REFLEXIVO Y TEÓRICO";
+    } else if (
+      reflectiveCount === pragmaticCount 
+    ) {
+      learningStyle = "REFLEXIVO Y PRAGMÁTICO";
+    } else if (
+      theoreticalCount === pragmaticCount 
+    ) {
+      learningStyle = "TEÓRICO Y PRAGMÁTICO";
     }
 
     setResult(learningStyle);
