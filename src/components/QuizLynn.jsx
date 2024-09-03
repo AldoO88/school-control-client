@@ -45,10 +45,10 @@ const QuizLynn = ({ test, category }) => {
   };
 
   const handleFinishQuiz = () => {
-    if(Object.keys(answers).length < test.questions.length){
-    alert('Por favor responde todas las preguntas');
-    return;
-    }
+   // if(Object.keys(answers).length < test.questions.length){
+   // alert('Por favor responde todas las preguntas');
+   // return;
+   // }
     console.log(answers);
     setFinished(true);
   };
@@ -158,9 +158,15 @@ const QuizLynn = ({ test, category }) => {
           />
         )
       ) : category === "Lynn" ? (
-        <Results answers={answers} />
+        <Results 
+          answers={answers}
+          category={category} 
+        />
       ) : (
-        <ResultPeter answers={answers} />
+        <ResultPeter 
+          answers={answers}
+          category={category}
+        />
       )}
     </div>
   );

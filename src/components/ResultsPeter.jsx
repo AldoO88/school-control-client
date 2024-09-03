@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/auth.context";
+import answersService from "../services/answers.service";
 
-const ResultPeter = ({ answers }) => {
+const ResultPeter = ({ answers, category }) => {
   const [result, setResult] = useState("");
   const [totals, setTotals] = useState({
     active: 0,
@@ -9,6 +11,11 @@ const ResultPeter = ({ answers }) => {
     theoretical: 0,
     pragmatic: 0,
   });
+
+  const { user } = useContext(AuthContext);
+  const [errorMessage, setErrorMessage] = useState(undefined);
+
+  const navigate = useNavigate();
 
   const activeQuestions = [
     3, 5, 7, 9, 13, 20, 26, 27, 35, 37, 41, 43, 46, 48, 51, 61, 67, 74, 75, 77,
@@ -106,11 +113,28 @@ const ResultPeter = ({ answers }) => {
     ));
   };
 
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const userId = user._id;
+      const data = {
+        answers: answers,
+        result: result
+      }
+      await answersService.createAnswers(category, data, userId);
+      navigate('/tests');
+    } catch (error) {
+      setErrorMessage(error.response.data.message);
+    }
+
+  }
+
   return (
     <div className="w-full mb-10 sm:mb-0 sm:w-4/4">
       <div className="relative h-full ml-0 mr-0 sm:mr-10">
         <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-        <div className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+        <form className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg" onSubmit={handleSubmit}>
           <div className="flex items-center -mt-1">
             <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">
               ¡Tu estilo preferido de aprender!
@@ -205,14 +229,13 @@ const ResultPeter = ({ answers }) => {
             ------------
           </p>
           <h2 className="font-bold text-3xl text-center text-green-600">{`${result}!!!`}</h2>
-          <Link to="/tests">
             <button
-              type="button"
+              type="onSubmit"
               className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
               Salir
             </button>
-          </Link>
-        </div>
+            {errorMessage && <p className="text-red-600">{errorMessage}</p>}
+        </form>
       </div>
     </div>
   );
