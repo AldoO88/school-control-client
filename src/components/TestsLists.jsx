@@ -1,7 +1,7 @@
 import CardTest from "./CardTest"
 import { testLynn } from "../quiz/tests"
 import { testPeter } from "../quiz/testPeter"
-import answersService from "../services/answers.service"
+//import answersService from "../services/answers.service"
 //import { AuthContext } from "../context/auth.context"
 //import { useContext, useEffect, useState } from "react"
 

@@ -7,10 +7,12 @@
       @apply 
         inline-flex 
         items-center 
-        gap-x-1 text-base 
+        gap-x-1
         leading-6
         text-white 
         hover:text-[#FABC3F]
+        text-sm 
+        font-semibold
     }
   }
 

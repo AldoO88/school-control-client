@@ -10,6 +10,7 @@ import Listbar from './components/Listbar'
 import QuizPage from './pages/QuizPage'
 import IsPrivate from './components/IsPrivate'
 import IsAnonymous from './components/IsAnonymous'
+import Sidebar from './components/Sidebar'
 
 function App() {
   const { isLoggedIn } = useContext(AuthContext)
@@ -21,7 +22,7 @@ function App() {
         {
           isLoggedIn && 
             <div>
-              <Listbar/>
+              <Sidebar/>
             </div>
         }
         <div className='flex items-start justify-center h-full w-full px-5 m-10 sm:px-0'>
