@@ -46,9 +46,6 @@ const Navbar = () => {
                 </svg>
               </button>
               </Link>
-              <Link className='inline-flex items-center' to='/tests'>
-                <button className="btn-nav">Diagnóstico</button>
-              </Link>
             </section>
             <section className="flex flex-row justify-evenly space-x-4 w-1/3">
 
