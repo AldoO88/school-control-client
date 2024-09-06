@@ -31,13 +31,13 @@ const Results = ({ answers, category}) => {
     const kinestesicoTotal = addTotal(kinestesicoQuestions);
 
     if (visualTotal > auditivoTotal && visualTotal > kinestesicoTotal) {
-      return "Visual";
+      return "VISUAL";
     } else if (auditivoTotal > visualTotal && auditivoTotal > kinestesicoTotal) {
-      return "Auditivo";
+      return "AUDITIVO";
     } else if (kinestesicoTotal > visualTotal && kinestesicoTotal > auditivoTotal) {
-      return "Kinestésico";
+      return "KIENESTÉSICO";
     } else {
-      return "Mixto";
+      return "MIXTO";
     }
   }, [answers]);
 
