@@ -104,12 +104,12 @@ export const questions = [
     id: 12,
     question: "1 terabyte es igual a:",
     category: "ofimatica",
-    correct_answer: "1024 megabytes",
+    correct_answer: "1024 gigabytes",
     incorrect_answers: ["1024 kilobytes", "1000 bytes", "1000 megabytes"],
   },
   {
     id: 13,
-    question: "1 terabyte es igual a:",
+    question: "1 gigabyte es igual a:",
     category: "ofimatica",
     correct_answer: "1024 megabytes",
     incorrect_answers: ["1024 kilobytes", "1000 bytes", "1000 megabytes"],
@@ -127,14 +127,10 @@ export const questions = [
   },
   {
     id: 15,
-    question: "¿Qué significan las siglas USB en español?",
+    question: "Fundador de Meta (Facebook)",
     category: "ofimatica",
-    correct_answer: "Bus de serie universal",
-    incorrect_answers: [
-      "Bus de sistema universal",
-      "Bus de serie unico",
-      "Bus de sistema unico",
-    ],
+    correct_answer: "Mark Zuckerberg",
+    incorrect_answers: ["Bill Gates", "Steve Jobs", "Jeff Bezos"],
   },
   {
     id: 16,
@@ -223,7 +219,7 @@ export const questions = [
     incorrect_answers: [
       "Programa para la creación de presentaciones",
       "Programa para la creación de hojas de estilos",
-      "Pfograma para la creación de graficos",
+      "Programa para la creación de graficos",
     ],
   },
   {

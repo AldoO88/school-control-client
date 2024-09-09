@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const InstructionsExam = ({title1, text, title2, instructions, text2, setActiveQuiz}) => {
   return(
     <div className="w-full sm:w-2/2">
@@ -23,6 +25,13 @@ const InstructionsExam = ({title1, text, title2, instructions, text2, setActiveQ
                 onClick={() => setActiveQuiz(true)}>
                 Comenzar
               </button>
+              <Link to="/tests">
+                    <button
+                      type="button"
+                      className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
+                      Salir
+                    </button>
+              </Link>
           </div>
       </div>
   </div>
