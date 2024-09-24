@@ -4,9 +4,9 @@ import { AuthContext } from "../context/auth.context";
 import answersService from "../services/answers.service";
 
 const ResultsExam = ({ score, answers, category }) => {
-  const [calif, setCalif] = useState(0.0);
+  const [ calif, setCalif ] = useState(0.0);
   const { user } = useContext(AuthContext);
-  const [errorMessage, setErrorMessage] = useState(undefined);
+  const [ errorMessage, setErrorMessage ] = useState(undefined);
 
   const navigate = useNavigate();
 

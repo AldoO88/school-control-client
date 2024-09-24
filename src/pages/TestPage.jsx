@@ -1,28 +1,21 @@
 import { useParams } from "react-router-dom";
-import QuizLearningStyle from "../components/QuizLearningStyle";
 import { testLynn } from "../quiz/tests";
 import { testPeter } from "../quiz/testPeter";
-import { questions } from "../quiz/examDiagnosticOfi"
-import QuizOfi from "../components/QuizOfi";
+import TestLearningStyle from "../components/TestLearningStyle";
 
-const QuizPage = () => {
+const TestPage = () => {
   const { category } = useParams();
   return (
     <div>
     {
       category === 'Lynn'
-      ? <QuizLearningStyle
+      ? <TestLearningStyle
           test={testLynn}
           category={category}
         />
       : category === 'Peter'
-        ? <QuizLearningStyle
+        ? <TestLearningStyle
           test={testPeter}
-          category={category}
-        />
-        : category === 'ofimatica'
-        ? <QuizOfi
-          questions={questions}
           category={category}
         />
         : <></>
@@ -33,4 +26,4 @@ const QuizPage = () => {
   )
 }
 
-export default QuizPage;
+export default TestPage;

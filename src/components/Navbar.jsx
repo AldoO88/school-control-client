@@ -19,6 +19,11 @@ const Navbar = () => {
                   </svg>
                 </button>
               </Link>
+              <Link className='inline-flex items-center' to='/register'>
+              <a className="btn-nav">
+                Evaluación Diagnóstica
+              </a>
+              </Link>
             </section>
             <section className="flex flex-row justify-evenly space-x-4 w-1/3">
 
@@ -46,6 +51,7 @@ const Navbar = () => {
                 </svg>
               </button>
               </Link>
+              
             </section>
             <section className="flex flex-row justify-evenly space-x-4 w-1/3">
 
