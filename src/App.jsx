@@ -14,6 +14,7 @@ import StudentRegister from "./pages/StudentRegister";
 import { StudentProvider } from "./context/student.context";
 import TestsTec47 from "./pages/TestsTec47";
 import TestPage from "./pages/TestPage";
+import TestResults from "./pages/TestsResults";
 
 function App() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -34,6 +35,7 @@ function App() {
               <Route path="/register" element={<StudentRegister />} />
               <Route path="/evaluations" element={<TestsTec47 />} />
               <Route path="/evaluations/:category" element={<TestPage />} />
+              <Route path="/evaluations/testsresults" element={<TestResults />} />
               <Route
                 path="/tests"
                 element={<IsPrivate> <Tests /> </IsPrivate>}

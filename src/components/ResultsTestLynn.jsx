@@ -1,7 +1,7 @@
 import { useCallback, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { StudentContext } from "../context/student.context";
-import testsService from "../services/tests.services";
+import testsService from "../services/tests.service";
 
 const ResultsTestLynn = ({ answers, category}) => {
 

@@ -3,7 +3,7 @@ import { testPeter } from "../quiz/testPeter";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { StudentContext } from "../context/student.context";
-import testsService from "../services/tests.services";
+import testsService from "../services/tests.service";
 
 const TestsListTec47 = () => {
   const [answeredTestLynn, setAnsweredTestLynn] = useState(undefined);
