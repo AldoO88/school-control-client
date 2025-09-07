@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="flex flex-row flex-nowrap justify-center space-x-2 py-6 bg-[#621333]">
       {!isLoggedIn && (
         <>
-          <section className="flex flex-row justify-around ml-28 space-x-4 w-1/3">
+          <section className="flex flex-row justify-around w-1/3 space-x-4 ml-28">
             <Link className="inline-flex items-center" to="/">
               <button className="btn-nav">
                 <svg
@@ -30,26 +30,30 @@ const Navbar = () => {
             <Link className="inline-flex items-center" to="/register">
               <a className="btn-nav">Evaluación Diagnóstica</a>
             </Link>
+            {/*
             <Link className="inline-flex items-center" to="/evaluations/testsresults">
               <a className="btn-nav">Resultados</a>
             </Link>
+            */}
           </section>
-          <section className="flex flex-row justify-evenly space-x-4 w-1/3"></section>
-          <section className="flex flex-row justify-center space-x-4 w-1/3 h-10">
+          <section className="flex flex-row w-1/3 space-x-4 justify-evenly"></section>
+          <section className="flex flex-row justify-center w-1/3 h-10 space-x-4">
+          {/* 
             <Link className="inline-flex items-center" to="/signup">
               <button className="btn-nav">Crea tu cuenta</button>
             </Link>
-            <Link className="w-full max-w-24 h-full max-h-10" to="/login">
+            <Link className="w-full h-full max-w-24 max-h-10" to="/login">
               <button className="font-semibold text-base bg-[#E85C0D] rounded-lg text-white w-full max-w-24 h-full max-h-10 hover:bg-[#FABC3F]">
                 Ingresa
               </button>
             </Link>
+            */}
           </section>
         </>
       )}
       {isLoggedIn && (
         <>
-          <section className="flex flex-row justify-start ml-28 space-x-16 w-1/3">
+          <section className="flex flex-row justify-start w-1/3 space-x-16 ml-28">
             <Link className="inline-flex items-center" to="/">
               <button className="btn-nav">
                 <svg
@@ -68,9 +72,9 @@ const Navbar = () => {
               </button>
             </Link>
           </section>
-          <section className="flex flex-row justify-evenly space-x-4 w-1/3"></section>
-          <section className="flex flex-row justify-center space-x-4 w-1/3 h-10">
-            <Link className="inline-flex justify-end items-center w-36" to="/">
+          <section className="flex flex-row w-1/3 space-x-4 justify-evenly"></section>
+          <section className="flex flex-row justify-center w-1/3 h-10 space-x-4">
+            <Link className="inline-flex items-center justify-end w-36" to="/">
               <button
                 onClick={logout}
                 className="flex flex-row justify-center items-center font-semibold text-base bg-[#E85C0D] rounded-lg text-white w-36 h-10 hover:bg-[#FABC3F]">

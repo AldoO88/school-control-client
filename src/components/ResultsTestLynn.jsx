@@ -36,8 +36,12 @@ const ResultsTestLynn = ({ answers, category}) => {
       return "AUDITIVO";
     } else if (kinestesicoTotal > visualTotal && kinestesicoTotal > auditivoTotal) {
       return "KIENESTÉSICO";
-    } else {
-      return "MIXTO";
+    } else if(visualTotal === auditivoTotal && visualTotal > kinestesicoTotal) {
+      return "VISUAL Y AUDITIVO";
+    } else if(visualTotal === kinestesicoTotal && visualTotal > auditivoTotal) {
+      return "VISUAL Y KIENESTÉSICO";
+    } else if(auditivoTotal === kinestesicoTotal && auditivoTotal > visualTotal) {
+      return "AUDITIVO Y KIENESTÉSICO";
     }
   }, [answers]);
 
@@ -49,10 +53,10 @@ const ResultsTestLynn = ({ answers, category}) => {
   const renderTableRows = (questions) => {
     return questions.map((questionNumber) => (
       <tr key={questionNumber}>
-        <td colSpan="2" className="border-2 border-indigo-500 text-center">
+        <td colSpan="2" className="text-center border-2 border-indigo-500">
           {questionNumber}
         </td>
-        <td colSpan="2" className="border-2 border-indigo-500 text-center">
+        <td colSpan="2" className="text-center border-2 border-indigo-500">
           {answers[questionNumber]?.selectedOption.substr(0, 1) ||
             "No respondida"}
         </td>
@@ -93,10 +97,10 @@ const ResultsTestLynn = ({ answers, category}) => {
             <table border="1" className="border-2">
               <tbody className="border-2">
                 <tr>
-                  <th colSpan="2" className="border-2 w-28 border-indigo-500">
+                  <th colSpan="2" className="border-2 border-indigo-500 w-28">
                     Pregunta
                   </th>
-                  <th colSpan="2" className="border-2 w-28 border-indigo-500">
+                  <th colSpan="2" className="border-2 border-indigo-500 w-28">
                     Respuesta
                   </th>
                 </tr>
@@ -115,10 +119,10 @@ const ResultsTestLynn = ({ answers, category}) => {
             <table border="1">
               <tbody className="border-2">
                 <tr>
-                  <th colSpan="2" className="border-2 w-28 border-indigo-500">
+                  <th colSpan="2" className="border-2 border-indigo-500 w-28">
                     Pregunta
                   </th>
-                  <th colSpan="2" className="border-2 w-28 border-indigo-500">
+                  <th colSpan="2" className="border-2 border-indigo-500 w-28">
                     Respuesta
                   </th>
                 </tr>
@@ -136,10 +140,10 @@ const ResultsTestLynn = ({ answers, category}) => {
             <table border="1" className="border-2">
               <tbody className="border-2">
                 <tr>
-                  <th colSpan="2" className="border-2 w-28 border-indigo-500">
+                  <th colSpan="2" className="border-2 border-indigo-500 w-28">
                     Pregunta
                   </th>
-                  <th colSpan="2" className="border-2 w-28 border-indigo-500">
+                  <th colSpan="2" className="border-2 border-indigo-500 w-28">
                     Respuesta
                   </th>
                 </tr>
@@ -159,11 +163,11 @@ const ResultsTestLynn = ({ answers, category}) => {
           <p className="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase">
             ------------
           </p>
-          <h2 className="font-bold text-3xl text-center text-green-600">{`${result}!!!`}</h2>
+          <h2 className="text-3xl font-bold text-center text-green-600">{`${result}!!!`}</h2>
           
           <button 
             type='submit'
-            className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+            className="px-4 py-2 m-2 text-white transition duration-500 bg-red-500 border border-red-500 rounded-md select-none ease hover:bg-red-600 focus:outline-none focus:shadow-outline"
           >
             Guardar
           </button>
