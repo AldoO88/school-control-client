@@ -15,6 +15,7 @@ import { StudentProvider } from "./context/student.context";
 import TestsTec47 from "./pages/TestsTec47";
 import TestPage from "./pages/TestPage";
 import TestResults from "./pages/TestsResults";
+import TestsTec47Emocional from "./pages/TestsTec47Emocional";
 
 function App() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -32,10 +33,13 @@ function App() {
           <div className="flex items-start justify-center h-full w-full px-5 m-10 sm:px-0">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/register" element={<StudentRegister />} />
+              <Route path="/register/learningstyles" element={<StudentRegister tipo='estilos'/>} />
+              <Route path="/register/socioemotional" element={<StudentRegister tipo='socioemocional'/>} />
               <Route path="/evaluations" element={<TestsTec47 />} />
               <Route path="/evaluations/:category" element={<TestPage />} />
               <Route path="/evaluations/testsresults" element={<TestResults />} />
+              <Route path="/socioemotional" element={<TestsTec47Emocional />} />
+              <Route path="/socioemotional/:category" element={<TestPage />} />
               <Route
                 path="/tests"
                 element={<IsPrivate> <Tests /> </IsPrivate>}

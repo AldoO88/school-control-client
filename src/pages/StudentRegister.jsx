@@ -10,7 +10,7 @@ const initStudentInfoForm = {
   group: "",
 };
 
-const StudentRegister = () => {
+const StudentRegister = ( { tipo } ) => {
   const { studentId, updateStudentId } = useContext(StudentContext);
   const [ studentInfoForm, setStudentInfoForm ] = useState(initStudentInfoForm);
   const [ errorMessage, setErrorMessage ] = useState(undefined);
@@ -31,7 +31,8 @@ const StudentRegister = () => {
       const idStudent = response.data._id;
       updateStudentId(idStudent);
       console.log(studentId);
-      navigate("/evaluations");
+      if(tipo==='estilos') navigate("/evaluations");
+      if(tipo==='socioemocional') navigate("/socioemotional");
     } catch (error) {
       console.error("error", error);
       setErrorMessage(error.response.data.message);
@@ -40,9 +41,10 @@ const StudentRegister = () => {
 
   useEffect(() => {
     if (studentId) {
-      navigate("/evaluations");
+      if(tipo==='estilos') navigate("/evaluations");
+      if(tipo==='socioemocional') navigate("/socioemotional");
     }
-  }, [studentId, navigate]);
+  }, [studentId, navigate, tipo]);
 
   return (
     <>

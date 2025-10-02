@@ -27,9 +27,13 @@ const Navbar = () => {
                 </svg>
               </button>
             </Link>
-            <Link className="inline-flex items-center" to="/register">
-              <a className="btn-nav">Evaluación Diagnóstica</a>
+            <Link className="inline-flex items-center" to="/register/learningstyles">
+              <a className="btn-nav">Estilos de Aprendizaje</a>
             </Link>
+            <Link className="inline-flex items-center" to="/register/socioemotional">
+              <a className="btn-nav">Evaluación Socioemocinal</a>
+            </Link>
+
             {/*
             <Link className="inline-flex items-center" to="/evaluations/testsresults">
               <a className="btn-nav">Resultados</a>
