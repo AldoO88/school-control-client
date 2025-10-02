@@ -1,10 +1,7 @@
-const Instructions = ({
+const InstructionsEmotional = ({
     title1,
-    text,
-    title2,
     instructions,
     text2,
-    options,
     setActiveQuiz,
   }) => {
     return (
@@ -20,11 +17,10 @@ const Instructions = ({
             <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
               ------------
             </p>
-            <p className="mb-2 text-lg text-gray-600">{text}</p>
             <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
               ------------
             </p>
-            <h2 className="font-bold text-lg">{title2}</h2>
+            
             <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
               ------------
             </p>
@@ -32,11 +28,7 @@ const Instructions = ({
               <span className="font-bold text-lg">Instrucciones: </span>
               <span>{instructions}</span>
             </p>
-            <div className="flex flex-row justify-evenly m-2 font-bold">
-              {options.map((option, index) => (
-                <span key={index}>{option}</span>
-              ))}
-            </div>
+            
             <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
               ------------
             </p>
@@ -52,5 +44,5 @@ const Instructions = ({
     );
   };
   
-  export default Instructions;
+  export default InstructionsEmotional;
   

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Instructions from "./Instructions";
 import { Link } from "react-router-dom";
 import ResultsTestLynn from "./ResultsTestLynn";
 import ResultsTestPeter from "./ResultsTestPeter";
+import InstructionsEmotional from "./InstructionsEmotional";
 
 const TestSocioemotional = ({ test, category }) => {
   const [questions, setQuestions] = useState([]);
@@ -147,7 +147,7 @@ const TestSocioemotional = ({ test, category }) => {
             <p>Loading questions...</p>
           )
         ) : (
-          <Instructions
+          <InstructionsEmotional
             title1={test.title1}
             text={test.text}
             title2={test.title2}
