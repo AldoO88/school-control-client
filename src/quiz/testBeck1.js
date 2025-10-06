@@ -75,7 +75,8 @@ export const testBeck1 = {
     },
     {
       id: 16,
-      question: 'Miedo a morirse',
+      quest
+      ion: 'Miedo a morirse',
     },
     {
       id: 17,
