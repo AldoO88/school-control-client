@@ -73,8 +73,8 @@ const TestSocioemotional = ({ test, category }) => {
                   key={question.id}
                   className="w-full mb-10 sm:mb-0 sm:w-2/2 p-2 justify-center">
                   <div className="relative h-full ml-0 mr-0 sm:mr-10">
-                    <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-                    <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg felx flex-col justify-center">
+                    <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-red-900 rounded-lg"></span>
+                    <div className="relative h-full p-5 bg-white border-2 border-red-900 rounded-lg felx flex-col justify-center">
                       <div className="flex items-center -mt-1">
                         <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">{`${question.id}.- ${question.question}`}</h3>
                       </div>
@@ -96,7 +96,7 @@ const TestSocioemotional = ({ test, category }) => {
                             />
                             <label
                               htmlFor={`question-${question.id}-option-${oIndex}`}
-                              className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+                              className="ms-2 text-base font-medium text-gray-900 dark:text-gray-300">
                               {option}
                             </label>
                           </div>
@@ -111,12 +111,12 @@ const TestSocioemotional = ({ test, category }) => {
                   <Link to="/socioemotional">
                     <button
                       type="button"
-                      className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
+                      className="border border-red-900 bg-red-900 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-700 focus:outline-none focus:shadow-outline">
                       Salir
                     </button>
                   </Link>
                   <button
-                    className="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline"
+                     className="border border-yellow-600 bg-yellow-600 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-yellow-500 focus:outline-none focus:shadow-outline"
                     onClick={resetQuiz}>
                     Reiniciar Test
                   </button>
@@ -125,20 +125,20 @@ const TestSocioemotional = ({ test, category }) => {
                   {currentBatch > 0 && (
                     <button
                       type="button"
-                      className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline"
+                       className="border border-yellow-600 bg-yellow-600 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-yellow-500 focus:outline-none focus:shadow-outline"
                       onClick={handlePreviousBatch}>
                       Anterior
                     </button>
                   )}
                   {(currentBatch + 1) * batchSize < test.questions.length ? (
                     <button
-                      className="border border-yellow-500 bg-yellow-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-yellow-600 focus:outline-none focus:shadow-outline"
+                       className="border border-yellow-600 bg-yellow-600 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-yellow-500 focus:outline-none focus:shadow-outline"
                       onClick={handleNextBatch}>
                       Siguiente
                     </button>
                   ) : (
                     <button
-                      className="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline"
+                       className="border border-emerald-700 bg-emerald-700 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-emerald-500 focus:outline-none focus:shadow-outline"
                       onClick={handleFinishQuiz}>
                       Terminar
                     </button>

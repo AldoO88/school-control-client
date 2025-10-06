@@ -16,6 +16,7 @@ import TestsTec47 from "./pages/TestsTec47";
 import TestPage from "./pages/TestPage";
 import TestResults from "./pages/TestsResults";
 import TestsTec47Emocional from "./pages/TestsTec47Emocional";
+import Footer from "./components/Footer";
 
 function App() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -71,6 +72,7 @@ function App() {
             </Routes>
           </div>
         </div>
+        <Footer />
       </StudentProvider>
     </>
   );

@@ -50,32 +50,42 @@ const ResultTestBeckBAI = ({ answers, category }) => {
     }
   }
 
-  return (
+   return (
     <div className="w-full mb-10 sm:mb-0 sm:w-4/4">
       <div className="relative h-full ml-0 mr-0 sm:mr-10">
-        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
-        <form className="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg" onSubmit={handleSubmit}>
-          <div className="flex items-center -mt-1">
-            <h3 className="my-2 ml-3 text-lg font-bold text-gray-800">
-              Resultado del Inventario de Ansiedad de Beck (BAI)
+        <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-[#bc955b] rounded-lg"></span>
+        <form className="relative h-full p-5 bg-white border-2 border-[#bc955b] rounded-lg" onSubmit={handleSubmit}>
+          <div className="flex flex-col items-center justify-center -mt-1">
+            <h3 className="my-2 ml-3 text-2xl font-bold text-center items-center text-gray-800">
+              ¡Gracias por realizar el test!
             </h3>
-          </div>
-          <p className="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase">
+          
+          <p className="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase">
             ------------
           </p>
-          <div className="flex flex-col items-center gap-4">
-            <h2 className="font-bold text-3xl text-center text-green-600">
-              Puntuación total: {score}
-            </h2>
-            <h2 className="font-bold text-2xl text-center text-blue-600">
-              Interpretación: {interpretation}
-            </h2>
           </div>
+          <div className="flex flex-col items-center gap-4">
+            <h2 className="font-bold text-2xl text-center text-gray-800">
+              {/*Puntuación total: {score}*/}
+              Tus respuestas han sido registradas correctamente.
+            </h2>
+            <h2 className="font-bold text-lg text-center text-gray-700">
+              {/*Interpretación: {interpretation}*/}
+              La información será utilizada de manera confidencial por el <br/>
+              área de Trabajo Social para brindarte una mejor atención y apoyo.
+            </h2>
+            <p className="mt-3 mb-1 text-xs font-medium text-gray-400 uppercase">
+            ------------
+           </p>
+          </div>
+          <div className="flex justify-center">
           <button
             type="submit"
-            className="border border-red-500 bg-red-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-600 focus:outline-none focus:shadow-outline">
+            className="border border-red-900 bg-red-900 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-red-700 focus:outline-none focus:shadow-outline">
             Guardar
           </button>
+          </div>
+          
           {errorMessage && <p className="text-red-600">{errorMessage}</p>}
         </form>
       </div>

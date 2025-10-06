@@ -64,9 +64,9 @@ const TestsListTec47Emo = () => {
                   <th scope="col" className="px-6 py-3">
                     Estatus
                   </th>
-                  <th scope="col" className="px-6 py-3">
+                  {/*<th scope="col" className="px-6 py-3">
                     Resultado
-                  </th>
+                  </th>*/}
 
                   <th scope="col" className="px-6 py-3">
                     Action
@@ -88,9 +88,9 @@ const TestsListTec47Emo = () => {
                           Realizado
                         </span>
                       </td>
-                      <td className="px-6 py-4 font-bold text-rose-800 hover:underline">
+                      {/*<td className="px-6 py-4 font-bold text-rose-800 hover:underline">
                         {JSON.parse(answeredTestBeck.result).interpretation}
-                      </td>
+                      </td>*/}
                       <td className="px-6 py-4 text-right">
                         <Link
                           disabled
@@ -121,7 +121,7 @@ const TestsListTec47Emo = () => {
                           Pendiente
                         </span>
                       </td>
-                      <td className="px-6 py-4"></td>
+                      {/*<td className="px-6 py-4"></td>*/}
                       <td className="px-6 py-4 text-right">
                         <Link
                           to={testBeck.category}
@@ -160,11 +160,9 @@ const TestsListTec47Emo = () => {
                           Realizado
                         </span>
                       </td>
-                      <Link to="" className="">
-                        <td className="px-6 py-6 font-bold text-rose-800 hover:underline">
+                        {/*<td className="px-6 py-6 font-bold text-rose-800 hover:underline">
                           {JSON.parse(answeredTestBeck1.result).interpretation}
-                        </td>
-                      </Link>
+                        </td>*/}
                       <td className="px-6 py-4 text-right">
                         <Link
                           disabled
@@ -195,7 +193,7 @@ const TestsListTec47Emo = () => {
                           Pendiente
                         </span>
                       </td>
-                      <td className="px-6 py-4"></td>
+                      {/*<td className="px-6 py-4"></td>*/}
                       <td className="px-6 py-4 text-right">
                         <Link
                           to={testBeck1.category}

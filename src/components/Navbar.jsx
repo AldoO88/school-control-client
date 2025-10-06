@@ -27,7 +27,7 @@ const Navbar = () => {
                 </svg>
               </button>
             </Link>
-            <Link className="inline-flex items-center" to="/register/learningstyles">
+            <Link className="inline-flex items-center cursor-default pointer-events-none" to="/register/learningstyles">
               <a className="btn-nav">Estilos de Aprendizaje</a>
             </Link>
             <Link className="inline-flex items-center" to="/register/socioemotional">
