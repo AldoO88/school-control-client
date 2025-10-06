@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import { testLynn } from "../quiz/tests";
 import { testPeter } from "../quiz/testPeter";
-import { testBeck } from "../quiz/testBeck";
+import { testBeck } from "../quiz/testBeck2";
+import { testBeck1 } from "../quiz/testBeck1";
 import TestLearningStyle from "../components/TestLearningStyle";
 import TestSocioemotional from "../components/TestSocioemotional";
+import TestSocioemotionalBeck1 from "../components/TestSocioemotionalBeck1";
 
 const TestPage = () => {
   const { category } = useParams();
@@ -25,7 +27,12 @@ const TestPage = () => {
           test={testBeck}
           category={category} 
         />
-        : <></>
+        : category === 'Beck1'
+        ? <TestSocioemotionalBeck1
+          test={testBeck1}
+          category={category} 
+        />
+        :<></>
 
       
     } 

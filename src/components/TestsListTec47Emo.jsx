@@ -1,5 +1,5 @@
-import { testBeck } from "../quiz/testBeck";
-import { testPeter } from "../quiz/testPeter";
+import { testBeck } from "../quiz/testBeck2";
+import { testBeck1 } from "../quiz/testBeck1";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { StudentContext } from "../context/student.context";
@@ -7,7 +7,7 @@ import testsService from "../services/tests.service";
 
 const TestsListTec47Emo = () => {
   const [answeredTestBeck, setAnsweredTestBeck] = useState(undefined);
-  const [answeredTestPeter, setAnsweredTestPeter] = useState(undefined);
+  const [answeredTestBeck1, setAnsweredTestBeck1] = useState(undefined);
   const [loading, setLoading] = useState(true);
   const { studentId, clearStudentId } = useContext(StudentContext);
 
@@ -22,8 +22,8 @@ const TestsListTec47Emo = () => {
       data.map((test) => {
         if (test.test === "Beck") {
           return setAnsweredTestBeck(test);
-        } else if (test.test === "Peter") {
-          return setAnsweredTestPeter(test);
+        } else if (test.test === "Beck1") {
+          return setAnsweredTestBeck1(test);
         }
         return null;
       });
@@ -89,7 +89,7 @@ const TestsListTec47Emo = () => {
                         </span>
                       </td>
                       <td className="px-6 py-4 font-bold text-rose-800 hover:underline">
-                        {answeredTestBeck.result}
+                        {JSON.parse(answeredTestBeck.result).interpretation}
                       </td>
                       <td className="px-6 py-4 text-right">
                         <Link
@@ -150,10 +150,10 @@ const TestsListTec47Emo = () => {
                   <th
                     scope="row"
                     className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                    {testPeter.title1}
+                    {testBeck1.title1}
                   </th>
-                  <td className="px-6 py-4">Estilos de aprendizaje</td>
-                  {answeredTestPeter ? (
+                  <td className="px-6 py-4">Socioemocional</td>
+                  {answeredTestBeck1 ? (
                     <>
                       <td className="px-6 py-4">
                         <span className="inline-flex h-8 w-20 font-bold bg-green-300 items-center text-red-700 justify-center rounded-lg">
@@ -162,7 +162,7 @@ const TestsListTec47Emo = () => {
                       </td>
                       <Link to="" className="">
                         <td className="px-6 py-6 font-bold text-rose-800 hover:underline">
-                          {answeredTestPeter.result}
+                          {JSON.parse(answeredTestBeck1.result).interpretation}
                         </td>
                       </Link>
                       <td className="px-6 py-4 text-right">
@@ -198,7 +198,7 @@ const TestsListTec47Emo = () => {
                       <td className="px-6 py-4"></td>
                       <td className="px-6 py-4 text-right">
                         <Link
-                          to={testPeter.category}
+                          to={testBeck1.category}
                           className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                           Realizar
                           <svg
@@ -223,7 +223,7 @@ const TestsListTec47Emo = () => {
               </tbody>
             </table>
             <div className="mt-4">
-              {answeredTestBeck && answeredTestPeter && (
+              {answeredTestBeck && answeredTestBeck1 && (
                 <button
                   onClick={hanleSalir}
                   className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

@@ -14,25 +14,21 @@ const InstructionsEmotional = ({
                 {title1}
               </h1>
             </div>
-            <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
-              ------------
-            </p>
-            <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
-              ------------
-            </p>
             
-            <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
+            <p className="mt-1 mb-1 text-xs font-medium text-green-500 uppercase">
               ------------
             </p>
-            <p>
+            <p style={{ whiteSpace: "pre-line" }}>
               <span className="font-bold text-lg">Instrucciones: </span>
+              <br />
+              <br />
               <span>{instructions}</span>
             </p>
             
-            <p className="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">
+            <p className="mt-1 mb-1 text-xs font-medium text-green-500 uppercase">
               ------------
             </p>
-            <h1 className="font-bold my-10">{text2}</h1>
+            <h1 className="font-bold my-5">{text2}</h1>
             <button
               className="border border-green-500 bg-green-500 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-green-600 focus:outline-none focus:shadow-outline"
               onClick={() => setActiveQuiz(true)}>
