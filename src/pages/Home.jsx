@@ -45,12 +45,12 @@ const Home = () => {
           ¿Qué deseas hacer?
         </h2>
         <div className="flex flex-col gap-4">
-          <Link to="/evaluations">
+          <Link to="/register/evaluations">
             <button disabled className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded transition">
               Tests de Estilos de Aprendizaje
             </button>
           </Link>
-          <Link to="/socioemotional">
+          <Link to="/register/socioemotional">
             <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded transition">
               Test Socioemocionales
             </button>

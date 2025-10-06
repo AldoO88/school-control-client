@@ -95,7 +95,7 @@ export const testBeck1 = {
     },
     {
       id: 21,
-      question: 'Seduracion (no debida al calor)',
+      question: 'Sudoracion (no debida al calor)',
     },
   ]
 }

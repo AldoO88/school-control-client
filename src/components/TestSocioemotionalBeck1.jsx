@@ -48,9 +48,12 @@ return (
                     <tr className="bg-[#bc955b] text-white">
                         <th className="border px-2 py-2 text-left">#</th>
                         <th className="border px-2 py-2 text-left">Pregunta</th>
-                        {options.map((option, idx) => (
-                        <th key={idx} className="border px-2 py-2 text-center">{option}</th>
-                        ))}
+                        
+                        <th  className="border px-2 py-2 text-center">0-En absoluto</th>
+                        <th  className="border px-2 py-2 text-center">1-Levemente</th>
+                        <th  className="border px-2 py-2 text-center">2-Moderadamente</th>
+                        <th  className="border px-2 py-2 text-center">3-Severamente</th>
+                    
                     </tr>
                     </thead>
                     <tbody>
