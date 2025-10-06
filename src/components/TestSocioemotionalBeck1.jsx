@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import InstructionsBeck1 from "./InstructionesBeck1";
-import ResultsTestBeckBAI from "./ResultTestBeckBai";
+import ResultsTestBeckBAI from "./ResultTestBeckBAI";
 
 const TestSocioemotionalBeck1 = ({ test, category }) => {
   const [answers, setAnswers] = useState({});
