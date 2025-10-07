@@ -33,6 +33,9 @@ const Navbar = () => {
             <Link className="inline-flex items-center" to="/register/socioemotional">
               <a className="btn-nav">Evaluación Socioemocinal</a>
             </Link>
+            <Link className="inline-flex items-center" to="/results">
+              <a className="btn-nav">Resultados</a>
+            </Link>
 
             {/*
             <Link className="inline-flex items-center" to="/evaluations/testsresults">

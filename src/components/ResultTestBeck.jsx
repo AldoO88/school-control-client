@@ -42,7 +42,7 @@ const ResultsTestBeck = ({ answers, category }) => {
       const idStudent = studentId;
       const data = {
         answers: answers,
-        result: JSON.stringify({score, interpretation})
+        result: JSON.stringify({ score, interpretation })
       }
       await testsService.createTest(category, data, idStudent);
       navigate('/socioemotional');

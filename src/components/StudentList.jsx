@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { getStudentsByGroupAndCategory } from "../services/studentsService";
+import { useState } from "react";
+import testsService from "../services/answers.service";
 
 const StudentsList = () => {
   const [grade, setGrade] = useState("");
@@ -9,7 +9,10 @@ const StudentsList = () => {
 
   const handleSearch = async () => {
     try {
-      const data = await getStudentsByGroupAndCategory(grade, group, category);
+
+      const params = { grade: grade, group: group, category: category };
+      console.log("Fetching with params:", params);
+      const data = await testsService.getStudentsByGroupAndCategory(params);
       setStudents(data);
     } catch (error) {
       console.error("Error fetching students:", error);

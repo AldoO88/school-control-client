@@ -17,6 +17,7 @@ import TestPage from "./pages/TestPage";
 import TestResults from "./pages/TestsResults";
 import TestsTec47Emocional from "./pages/TestsTec47Emocional";
 import Footer from "./components/Footer";
+import StudentsList from "./components/StudentList";
 
 function App() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -41,6 +42,7 @@ function App() {
               <Route path="/evaluations/testsresults" element={<TestResults />} />
               <Route path="/socioemotional" element={<TestsTec47Emocional />} />
               <Route path="/socioemotional/:category" element={<TestPage />} />
+              <Route path="/results" element={<StudentsList />} />
               <Route
                 path="/tests"
                 element={<IsPrivate> <Tests /> </IsPrivate>}
