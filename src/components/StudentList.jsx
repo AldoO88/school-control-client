@@ -75,6 +75,7 @@ const StudentsList = () => {
       <table className="table-auto w-full border-collapse border border-gray-300">
         <thead>
           <tr>
+            <th className="border px-4 py-2">No.</th>
             <th className="border px-4 py-2">Nombre</th>
             <th className="border px-4 py-2">Apellido</th>
             <th className="border px-4 py-2">Grado</th>
@@ -87,29 +88,16 @@ const StudentsList = () => {
         <tbody>
         {Array.isArray(students) && students.length > 0 ? (
   students.map((student, index) => {
-    const parsedResult = (() => {
-      if (!student.result || student.result === 'Sin resultado') {
-        // Caso 1: No hay resultado o es "Sin resultado"
-        return { score: "Sin resultado", interpretation: "" };
-      }
-
-      try {
-        // Caso 2: Intentar parsear si parece un JSON válido
-        return JSON.parse(student.result);
-      } catch (error) {
-        // Caso 3: Si no es JSON, devolver el valor como score
-        return { score: student.result, interpretation: "" };
-      }
-    })();
-
+   
     return (
       <tr key={index}>
+        <td className="border px-4 py-2">{index + 1}</td>
         <td className="border px-4 py-2">{student.name}</td>
         <td className="border px-4 py-2">{student.lastname}</td>
         <td className="border px-4 py-2">{student.grade}</td>
         <td className="border px-4 py-2">{student.group}</td>
-        <td className="border px-4 py-2">{parsedResult.score}</td>
-        <td className="border px-4 py-2">{parsedResult.interpretation}</td>
+        <td className="border px-4 py-2">{student.score}</td>
+        <td className="border px-4 py-2">{student.interpretation}</td>
       </tr>
     );
   })
