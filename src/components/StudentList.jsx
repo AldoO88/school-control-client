@@ -86,30 +86,40 @@ const StudentsList = () => {
         </thead>
         <tbody>
         {Array.isArray(students) && students.length > 0 ? (
-            students.map((student, index) => {
-              const parsedResult = student.result && student.result !== 'Sin resultado' ? JSON.parse(student.result) : {score: " ", interpretation: " "};
-              return(
-              <tr key={index}>
-                <td className="border px-4 py-2">{student.name}</td>
-                <td className="border px-4 py-2">{student.lastname}</td>
-                <td className="border px-4 py-2">{student.grade}</td>
-                <td className="border px-4 py-2">{student.group}</td>
-                <td className="border px-4 py-2">
-                  { parsedResult.score }
-                </td>
-                <td className="border px-4 py-2">
-                  {parsedResult.interpretation}
-                </td>
-              </tr>)
-              
-            })
-          ) : (
-            <tr>
-              <td colSpan="5" className="border px-4 py-2 text-center">
-                No hay estudiantes para mostrar.
-              </td>
-            </tr>
-          )}
+  students.map((student, index) => {
+    const parsedResult = (() => {
+      if (!student.result || student.result === 'Sin resultado') {
+        // Caso 1: No hay resultado o es "Sin resultado"
+        return { score: "Sin resultado", interpretation: "" };
+      }
+
+      try {
+        // Caso 2: Intentar parsear si parece un JSON válido
+        return JSON.parse(student.result);
+      } catch (error) {
+        // Caso 3: Si no es JSON, devolver el valor como score
+        return { score: student.result, interpretation: "" };
+      }
+    })();
+
+    return (
+      <tr key={index}>
+        <td className="border px-4 py-2">{student.name}</td>
+        <td className="border px-4 py-2">{student.lastname}</td>
+        <td className="border px-4 py-2">{student.grade}</td>
+        <td className="border px-4 py-2">{student.group}</td>
+        <td className="border px-4 py-2">{parsedResult.score}</td>
+        <td className="border px-4 py-2">{parsedResult.interpretation}</td>
+      </tr>
+    );
+  })
+) : (
+  <tr>
+    <td colSpan="6" className="border px-4 py-2 text-center">
+      No hay estudiantes para mostrar.
+    </td>
+  </tr>
+)}
         </tbody>
       </table>
     </div>
