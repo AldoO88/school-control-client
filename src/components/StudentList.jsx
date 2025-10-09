@@ -1,5 +1,7 @@
 import { useState } from "react";
 import testsService from "../services/answers.service";
+import jsPDF from "jspdf";
+import autoTable from "jspdf-autotable";
 
 const StudentsList = () => {
   const [grade, setGrade] = useState("");
@@ -27,8 +29,70 @@ const StudentsList = () => {
     }
   };
 
+  // NUEVA FUNCIÓN PARA GENERAR PDF
+  const handleGeneratePDF = () => {
+    const doc = new jsPDF();
+    const pageWidth = doc.internal.pageSize.getWidth();
+    
+    let fileNameCategory = "lista_estudiantes.pdf";
+    
+    if(category === "Beck1"){
+      const title = "Resultados Inventario de Ansiedad de Beck (BAI)";
+      const textWidth = doc.getTextWidth(title);
+      const x = (pageWidth - textWidth) / 2;
+      doc.text(title, x, 10);
+      fileNameCategory = "_Beck_BAI";
+    }else if(category === "Beck"){
+      const title = "Resultados Inventario de Depresión de Beck (BDI-2)";
+      const textWidth = doc.getTextWidth(title);
+      const x = (pageWidth - textWidth) / 2;
+      doc.text(title, x, 10);
+      fileNameCategory = "_Beck_BDI2";
+    }else if(category === "Lynn"){
+      const title = "Resultados Estilos de Aprendizaje: Peter Honey-Alonso Gallego";
+      const textWidth = doc.getTextWidth(title);
+      const x = (pageWidth - textWidth) / 2;
+      doc.text(title, x, 10 );
+      fileNameCategory = "_Peter_Honey";
+    }
+    else if(category === "Peter"){
+      const title = "Resultados Estilos de Aprendizaje de Lynn O'Brien";
+      const textWidth = doc.getTextWidth(title);
+      const x = (pageWidth - textWidth) / 2;
+      doc.text(title, x, 10);
+      fileNameCategory = "_Lynn_OBrien";
+    }
+  
+    doc.text(`GRADO: ${grade}  GRUPO: ${group}`, 70, 20);
+    doc.setFontSize(12);
+    const tableColumn = ["No.", "Nombre", "Apellido", "Resultado", "Interpretación"];
+    const tableRows = [];
+
+    students.forEach((student, index) => {
+      tableRows.push([
+        index + 1,
+        student.name,
+        student.lastname,
+        student.score,
+        student.interpretation,
+      ]);
+    });
+
+    autoTable(doc, {
+      head: [tableColumn],
+      body: tableRows,
+      startY: 25,
+    });
+
+    
+    doc.save(grade + "_" + group + "_" + fileNameCategory + ".pdf");
+  };
+
+  
+
   return (
-    <div>
+    <div className="flex flex-col items-center p-4">
+    <div className="flex flex-col justify-between mb-4">
       <h1 className="text-2xl font-bold text-center">Lista de Estudiantes</h1>
       <div className="flex gap-4 my-4">
         <select
@@ -110,6 +174,16 @@ const StudentsList = () => {
 )}
         </tbody>
       </table>
+    </div>
+    <div>
+      <button
+          onClick={handleGeneratePDF}
+          className="bg-green-600 text-white px-4 py-2 rounded"
+          disabled={students.length === 0}
+        >
+          Generar PDF
+        </button>
+    </div>
     </div>
   );
 };
