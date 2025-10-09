@@ -65,18 +65,38 @@ const StudentsList = () => {
   
     doc.text(`GRADO: ${grade}  GRUPO: ${group}`, 70, 20);
     doc.setFontSize(12);
-    const tableColumn = ["No.", "Nombre", "Apellido", "Resultado", "Interpretación"];
+
+    let tableColumn = [];
     const tableRows = [];
+
+    if(category === "Peter" || category === "Lynn"){
+      tableColumn = ["No.", "Nombre", "Apellido", "Resultado"];
+      
 
     students.forEach((student, index) => {
       tableRows.push([
         index + 1,
         student.name,
         student.lastname,
-        student.score,
         student.interpretation,
       ]);
     });
+    }else{
+
+      tableColumn = ["No.", "Nombre", "Apellido", "Resultado", "Interpretación"];
+
+      students.forEach((student, index) => {
+        tableRows.push([
+          index + 1,
+          student.name,
+          student.lastname,
+          student.score,
+          student.interpretation,
+        ]);
+      });
+
+    }
+    
 
     autoTable(doc, {
       head: [tableColumn],
