@@ -35,7 +35,7 @@ function App() {
           <div className="flex items-start justify-center h-full w-full px-5 m-10 sm:px-0">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/register/learningstyles" element={<StudentRegister tipo='estilos'/>} />
+              <Route path="/register/evaluations" element={<StudentRegister tipo='estilos'/>} />
               <Route path="/register/socioemotional" element={<StudentRegister tipo='socioemocional'/>} />
               <Route path="/evaluations" element={<TestsTec47 />} />
               <Route path="/evaluations/:category" element={<TestPage />} />
