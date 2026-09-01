@@ -46,7 +46,7 @@ const Home = () => {
         </h2>
         <div className="flex flex-col gap-4">
           <Link to="/register/evaluations">
-            <button disabled className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded transition">
+            <button className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-3 rounded transition">
               Tests de Estilos de Aprendizaje
             </button>
           </Link>
