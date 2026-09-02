@@ -43,6 +43,9 @@ const QuizOfi = ( { questions, category, title1, text, title2, instructions } ) 
   }, [currentBatch, questions]);
 
   const handleAnswerChange = (questionId, answer) => {
+    const currentQuestion = questions.find((q) => q.id === questionId);
+    const previousAnswer = answered[questionId]?.selectedOption;
+
     setAnswered((prevAnswers) => ({
       ...prevAnswers,
       [questionId]: {
@@ -51,9 +54,13 @@ const QuizOfi = ( { questions, category, title1, text, title2, instructions } ) 
       }
     }));
 
-    // Incrementar la puntuación si la respuesta es correcta
-    const currentQuestion = questions.find((q) => q.id === questionId);
-    if (currentQuestion.correct_answer === answer) {
+    // Ajustar el score: decrementar si la respuesta anterior era correcta
+    const previousWasCorrect = previousAnswer && currentQuestion.correct_answer === previousAnswer;
+    const newIsCorrect = currentQuestion.correct_answer === answer;
+
+    if (previousWasCorrect && !newIsCorrect) {
+      setScore((prevScore) => prevScore - 1);
+    } else if (!previousWasCorrect && newIsCorrect) {
       setScore((prevScore) => prevScore + 1);
     }
   };

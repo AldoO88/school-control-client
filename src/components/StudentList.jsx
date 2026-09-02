@@ -54,13 +54,30 @@ const StudentsList = () => {
       const x = (pageWidth - textWidth) / 2;
       doc.text(title, x, 10 );
       fileNameCategory = "_Peter_Honey";
-    }
-    else if(category === "Peter"){
+    }else if(category === "Peter"){
       const title = "Resultados Estilos de Aprendizaje de Lynn O'Brien";
       const textWidth = doc.getTextWidth(title);
       const x = (pageWidth - textWidth) / 2;
       doc.text(title, x, 10);
       fileNameCategory = "_Lynn_OBrien";
+    }else if(category === "ofimatica-1RO"){
+      const title = "Resultados Quiz de Ofimática - 1RO";
+      const textWidth = doc.getTextWidth(title);
+      const x = (pageWidth - textWidth) / 2;
+      doc.text(title, x, 10);
+      fileNameCategory = "_Ofimatica_1RO";
+    }else if(category === "ofimatica-2DO"){
+      const title = "Resultados Quiz de Ofimática - 2DO";
+      const textWidth = doc.getTextWidth(title);
+      const x = (pageWidth - textWidth) / 2;
+      doc.text(title, x, 10);
+      fileNameCategory = "_Ofimatica_2DO";
+    }else if(category === "ofimatica-3RO"){
+      const title = "Resultados Quiz de Ofimática - 3RO";
+      const textWidth = doc.getTextWidth(title);
+      const x = (pageWidth - textWidth) / 2;
+      doc.text(title, x, 10);
+      fileNameCategory = "_Ofimatica_3RO";
     }
   
     doc.text(`GRADO: ${grade}  GRUPO: ${group}`, 70, 20);
@@ -69,7 +86,7 @@ const StudentsList = () => {
     let tableColumn = [];
     const tableRows = [];
 
-    if(category === "Peter" || category === "Lynn"){
+    if(category === "Peter" || category === "Lynn" || category.startsWith("ofimatica")){
       tableColumn = ["No.", "Nombre", "Apellido", "Resultado"];
       
 
@@ -150,6 +167,9 @@ const StudentsList = () => {
       <option value="Beck">Beck BDI-2</option>
       <option value="Lynn">Estilos de Aprendizaje: Peter Honey-Alonso Gallego</option>
       <option value="Peter">Estilos de Aprendizaje de Lynn O Brien</option>
+      <option value="ofimatica-1RO">Ofimática - 1RO</option>
+      <option value="ofimatica-2DO">Ofimática - 2DO</option>
+      <option value="ofimatica-3RO">Ofimática - 3RO</option>
     </select>
 
         <button onClick={handleSearch} className="bg-blue-500 text-white px-4 py-2">
@@ -172,7 +192,7 @@ const StudentsList = () => {
         <tbody>
         {Array.isArray(students) && students.length > 0 ? (
   students.map((student, index) => {
-   
+    const isOfimatica = category.startsWith("ofimatica");
     return (
       <tr key={index}>
         <td className="border px-4 py-2">{index + 1}</td>
@@ -180,8 +200,16 @@ const StudentsList = () => {
         <td className="border px-4 py-2">{student.lastname}</td>
         <td className="border px-4 py-2">{student.grade}</td>
         <td className="border px-4 py-2">{student.group}</td>
-        <td className="border px-4 py-2">{student.score}</td>
-        <td className="border px-4 py-2">{student.interpretation}</td>
+        {isOfimatica ? (
+          <>
+            <td className="border px-4 py-2 font-bold text-rose-800" colSpan={2}>{student.interpretation}</td>
+          </>
+        ) : (
+          <>
+            <td className="border px-4 py-2">{student.score}</td>
+            <td className="border px-4 py-2">{student.interpretation}</td>
+          </>
+        )}
       </tr>
     );
   })
