@@ -1,41 +1,25 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/auth.context";
+import { StudentContext } from "../context/student.context";
 import answersService from "../services/answers.service";
 
-const ResultsExam = ({ score, answers, category }) => {
-  const [ calif, setCalif ] = useState(0.0);
-  const { user } = useContext(AuthContext);
+const ResultsExam = ({ score, answers, category, totalQuestions }) => {
   const [ errorMessage, setErrorMessage ] = useState(undefined);
-
+  const { studentId } = useContext(StudentContext);
   const navigate = useNavigate();
-
-  const calculateCalif = (score) => {
-    const calculate = (score * 10) / 40;
-    if (calculate < 5) {
-      return setCalif(5.0);
-    }
-    setCalif(calculate);
-  };
-
-  useEffect(() => {
-    calculateCalif(score);
-  }, [score]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const userId = user._id;
       const data = {
         answers: answers,
-        result: calif
+        result: `${score}/${totalQuestions}`
       }
-      await answersService.createAnswers(category, data, userId);
-      navigate('/tests');
+      await answersService.createAnswers(category, data, studentId);
+      navigate('/quizz');
     } catch (error) {
       setErrorMessage(error.response.data.message);
     }
-
   };
 
   return (
@@ -47,27 +31,26 @@ const ResultsExam = ({ score, answers, category }) => {
           onSubmit={handleSubmit}>
           <div className="flex items-center -mt-1 my-4">
             <h1 className="my-2 ml-3 text-lg font-bold text-gray-800">
-              ¡Tu calificación es:!
+              ¡Tu resultado es!
             </h1>
           </div>
           <div className="flex flex-col items-center my-2">
-            {calif >= 8 ? (
+            {score >= totalQuestions * 0.8 ? (
               <>
                 <h1 className="font-bold text-3xl text-center text-green-600 py-4">
                   ¡Felicidades!
                 </h1>
                 <h1 className="font-bold text-6xl text-center text-green-600 py-4">
-                  {" "}
-                  {calif}
+                  {score} / {totalQuestions}
                 </h1>
               </>
-            ) : calif >= 6 && calif < 8 ? (
+            ) : score >= totalQuestions * 0.6 ? (
               <>
                 <h1 className="font-bold text-3xl text-center text-yellow-500 py-4">
                   ¡Aprobaste!
                 </h1>
                 <h1 className="font-bold text-6xl text-center text-yellow-500 py-4">
-                  {calif}
+                  {score} / {totalQuestions}
                 </h1>
               </>
             ) : (
@@ -76,7 +59,7 @@ const ResultsExam = ({ score, answers, category }) => {
                   ¡No te preocupes, sigue intentando!
                 </h1>
               <h1 className="font-bold text-6xl text-center text-red-700 py-4">
-                {calif}
+                  {score} / {totalQuestions}
               </h1>
               </>
             )}

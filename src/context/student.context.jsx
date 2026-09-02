@@ -4,12 +4,17 @@ export const StudentContext = createContext();
 
 export const StudentProvider = ({ children }) => {
   const [studentId, setStudentId] = useState(null);
+  const [grade, setGrade] = useState(null);
 
-    // Cargar el studentId desde localStorage al iniciar la aplicación
+    // Cargar el studentId y grade desde localStorage al iniciar la aplicación
     useEffect(() => {
       const storedStudentId = localStorage.getItem('studentId');
+      const storedGrade = localStorage.getItem('studentGrade');
       if (storedStudentId) {
         setStudentId(storedStudentId);
+      }
+      if (storedGrade) {
+        setGrade(storedGrade);
       }
     }, []);
   
@@ -18,15 +23,22 @@ export const StudentProvider = ({ children }) => {
       setStudentId(id);
       localStorage.setItem('studentId', id);  // Guardar en localStorage
     };
+
+    const updateGrade = (g) => {
+      setGrade(g);
+      localStorage.setItem('studentGrade', g);
+    };
   
     // Función para borrar el studentId del contexto y localStorage
     const clearStudentId = () => {
       setStudentId(null);
+      setGrade(null);
       localStorage.removeItem('studentId');  // Eliminar del localStorage
+      localStorage.removeItem('studentGrade');
     };
 
   return (
-    <StudentContext.Provider value={{ studentId, updateStudentId, clearStudentId }}>
+    <StudentContext.Provider value={{ studentId, grade, updateStudentId, updateGrade, clearStudentId }}>
       {children}
     </StudentContext.Provider>
   );

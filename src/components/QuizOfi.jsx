@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import InstructionsExam from "./InstructionsExam";
 import ResultsExam from "./ResultsExam";
 
-const test = {
+const defaultTest = {
   title1: 'Examen Diagnóstico de Ofimática',
     text: 'Este examen tiene como objetivo conocer tu nivel de conocimientos en ofimática, para poder ofrecerte un curso que se adapte a tus necesidades.',
     title2: 'Es muy importante que estes concentrado y no te distraigas. Tomate el tiempo necesario para responder cada pregunta.',
@@ -11,7 +11,7 @@ const test = {
   }
 
 
-const QuizOfi = ( { questions, category } ) => {
+const QuizOfi = ( { questions, category, title1, text, title2, instructions } ) => {
   const [questionsGroup, setQuestionsGroup] = useState([]);
   const [answered, setAnswered] = useState([]);
   const [currentBatch, setCurrentBatch] = useState(0);
@@ -175,10 +175,10 @@ const QuizOfi = ( { questions, category } ) => {
           )
         ) : (
           <InstructionsExam
-            title1={test.title1}
-            text={test.text}
-            title2={test.title2}
-            instructions={test.instructions}
+            title1={title1 || defaultTest.title1}
+            text={text || defaultTest.text}
+            title2={title2 || defaultTest.title2}
+            instructions={instructions || defaultTest.instructions}
             setActiveQuiz={setActiveQuiz}
           />
         )
@@ -187,6 +187,7 @@ const QuizOfi = ( { questions, category } ) => {
             score={score}
             answers={answered}
             category={category}
+            totalQuestions={questions.length}
           />
       }
     </div>

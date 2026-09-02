@@ -3,7 +3,7 @@ export const questions = [
     id: 1,
     question:
       "Es una máquina capaz de procesar y transformar gran cantídad de datos muy rápidamente, de acuerdo con un programa de instrucciones.",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Computadora",
     incorrect_answers: ["Calculadora", "Procesador", "Unidad de Procesamiento"],
   },
@@ -11,7 +11,7 @@ export const questions = [
     id: 2,
     question:
       "Se refiere a las partes físicas, tangibles, de un sistema informático, es decir todo aquello que se puede tocar, sus componentes eléctricos, electrónicos, electromecánicos.",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Hardware",
     incorrect_answers: ["Computadora", "Software", "CPU"],
   },
@@ -19,7 +19,7 @@ export const questions = [
     id: 3,
     question:
       "Conjunto de programas, instrucciones y reglas informáticas que permiten ejecutar distintas tareas en una computadora. Se considera que es el equipamiento lógico e intangible de un ordenador.",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Software",
     incorrect_answers: ["Sistema Operativo", "Hardware", "Microsoft Office"],
   },
@@ -27,14 +27,14 @@ export const questions = [
     id: 4,
     question:
       "Es un conjunto de programas que hacen posible la comunicación entre el usuario y la computadora; esto es la interfaz, todo aquel medio físico que conecta un dispositivo periférico con la computadora; o todo software que comunica al usuario con la computadora.",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Sistema Operativo",
     incorrect_answers: ["Software", "Hardware", "Microsoft Office"],
   },
   {
     id: 5,
     question: "¿Qué significan las siglas CPU en español?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Unidad Central de Procesamiento",
     incorrect_answers: [
       "Central de proceso unitario",
@@ -45,7 +45,7 @@ export const questions = [
   {
     id: 6,
     question: "¿Qué significan las siglas RAM en español?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Memoria de acceso aleatorio",
     incorrect_answers: [
       "Memoria aleatoria rapida",
@@ -56,7 +56,7 @@ export const questions = [
   {
     id: 7,
     question: "¿Qué significan las siglas ROM en español?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Memoria de solo lectura",
     incorrect_answers: [
       "Memoria de acceso aleatorio",
@@ -67,7 +67,7 @@ export const questions = [
   {
     id: 8,
     question: "Ejemplos de dispositivos o perifericos de entrada?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Teclado, mouse, scanner",
     incorrect_answers: [
       "Monitor, impresora, bocinas",
@@ -78,7 +78,7 @@ export const questions = [
   {
     id: 9,
     question: "Ejemplos de dispositivos o perifericos de salida?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Monitor, impresora, bocinas",
     incorrect_answers: [
       "Teclado, mouse, scanner",
@@ -89,35 +89,35 @@ export const questions = [
   {
     id: 10,
     question: "1 megabyte es igual a:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "1024 kilobytes",
     incorrect_answers: ["1024 bytes", "1000 kilobytes", "1000 bytes"],
   },
   {
     id: 11,
     question: "1 byte es igual a:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "8 bits",
     incorrect_answers: ["4 bits", "100 bits", "1024 bits"],
   },
   {
     id: 12,
     question: "1 terabyte es igual a:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "1024 gigabytes",
     incorrect_answers: ["1024 kilobytes", "1000 bytes", "1000 megabytes"],
   },
   {
     id: 13,
     question: "1 gigabyte es igual a:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "1024 megabytes",
     incorrect_answers: ["1024 kilobytes", "1000 bytes", "1000 megabytes"],
   },
   {
     id: 14,
     question: "¿Qué significan las siglas USB en español?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Bus de serie universal",
     incorrect_answers: [
       "Bus de sistema universal",
@@ -128,28 +128,28 @@ export const questions = [
   {
     id: 15,
     question: "Fundador de Meta (Facebook)",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Mark Zuckerberg",
     incorrect_answers: ["Bill Gates", "Steve Jobs", "Jeff Bezos"],
   },
   {
     id: 16,
     question: "Fundador de Microsoft",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Bill Gates",
     incorrect_answers: ["Steve Jobs", "Mark Zuckerberg", "Jeff Bezos"],
   },
   {
     id: 17,
     question: "Fundador de Apple",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Steve Jobs",
     incorrect_answers: ["Bill Gates", "Mark Zuckerberg", "Jeff Bezos"],
   },
   {
     id: 18,
     question: "¿Qué significa la siglas PC en español?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Computadora Personal",
     incorrect_answers: [
       "Computadora Portatil",
@@ -160,14 +160,14 @@ export const questions = [
   {
     id: 19,
     question: "¿Comó se le llama al conjunto de 4 bits?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Nibble",
     incorrect_answers: ["Byte", "Kilobyte", "Megabyte"],
   },
   {
     id: 20,
     question: "Ofimática es un acronimo de:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Oficina e Informática",
     incorrect_answers: [
       "Oficina y Matemáticas",
@@ -178,7 +178,7 @@ export const questions = [
   {
     id: 21,
     question: "¿Qué son las herramientas ofimáticas?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer:
       "Conjunto de aplicaciones informáticas que se utilizan en oficinas para mejorar, automatizar y optimizar los procedimientos y tareas",
     incorrect_answers: [
@@ -190,7 +190,7 @@ export const questions = [
   {
     id: 22,
     question: "Ejemplos de herramientas ofimáticas:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Word, Excel, Power Point, Access",
     incorrect_answers: [
       "Photoshop, Illustrator, InDesign",
@@ -201,7 +201,7 @@ export const questions = [
   {
     id: 23,
     question: "¿Que es un procesador de texto?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer:
       "Es un software que permite la creación, edición e impresión de documentos de texto",
     incorrect_answers: [
@@ -213,7 +213,7 @@ export const questions = [
   {
     id: 24,
     question: "¿Que es una hoja de cálculo?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer:
       "Programa para la manipulación de datos dispuestos en forma de tablas, con la finalidad de efectuar operaciones complejas con fórmulas y funciones",
     incorrect_answers: [
@@ -225,7 +225,7 @@ export const questions = [
   {
     id: 25,
     question: "Ejemplos de procesadores de texto:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Word, Google Docs, LibreOffice Writer",
     incorrect_answers: [
       "Word, LibreOffice Calc, Google Sheets",
@@ -236,7 +236,7 @@ export const questions = [
   {
     id: 26,
     question: "Ejemplos de hojas de cálculo:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Excel, Google Sheets, LibreOffice Calc",
     incorrect_answers: [
       "Word, Google Sheets, LibreOffice Writer",
@@ -247,7 +247,7 @@ export const questions = [
   {
     id: 27,
     question: "Ejemplos de presentadores de diapositivas:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Power Point, Google Slides, LibreOffice Impress",
     incorrect_answers: [
       "Word, Google Sheets, LibreOffice Impress",
@@ -259,14 +259,14 @@ export const questions = [
     id: 28,
     question:
       "Las aplicaciones: Word, Excel, Power Point, Access, pertenecen a la suite de:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Microsoft Office",
     incorrect_answers: ["Google Suite", "LibreOffice", "Adobe Suite"],
   },
   {
     id: 29,
     question: "Ejemplos de sistemas operativos:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Windows, MacOS, Linux",
     incorrect_answers: [
       "Word, Excel, Power Point, Access",
@@ -277,7 +277,7 @@ export const questions = [
   {
     id: 30,
     question: "¿Que es una red de computadoras?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer:
       "Conjunto de computadoras y otros dispositivos interconectados entre sí para compartir información, recursos y servicios",
     incorrect_answers: [
@@ -289,7 +289,7 @@ export const questions = [
   {
     id: 31,
     question: "¿Qué es una topología de red?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer:
       "Es la forma en que están distribuidos los dispositivos y las conexiones en una red de computadoras",
     incorrect_answers: [
@@ -301,7 +301,7 @@ export const questions = [
   {
     id: 32,
     question: "¿Qué topologías de red existen?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Estrella, Anillo, Malla, Bus, Doble Anillo",
     incorrect_answers: [
       "Estrella, Anillo, Malla, Triangular",
@@ -313,7 +313,7 @@ export const questions = [
     id: 33,
     question:
       "Es la topología donde todos los dispositivos están conectados a un punto central, que puede ser un switch o un router:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Estrella",
     incorrect_answers: ["Anillo", "Malla", "Bus"],
   },
@@ -321,7 +321,7 @@ export const questions = [
     id: 34,
     question:
       "Topología de red donde todos los dispositivos están conectados todos con todos:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Malla",
     incorrect_answers: ["Estrella", "Anillo", "Bus"],
   },
@@ -329,7 +329,7 @@ export const questions = [
     id: 35,
     question:
       "Topología de red donde todos los dispositivos están conectados en un solo cable:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Bus",
     incorrect_answers: ["Estrella", "Anillo", "Malla"],
   },
@@ -337,7 +337,7 @@ export const questions = [
     id: 36,
     question:
       "Qué topología de red es la mas utilizada en las redes de computadoras:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Estralla",
     incorrect_answers: ["Anillo", "Malla", "Bus"],
   },
@@ -345,14 +345,14 @@ export const questions = [
     id: 37,
     question:
       "Topología de red donde los dispositivos están conectados uno tras otro formando un circulo:",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Anillo",
     incorrect_answers: ["Estrella", "Malla", "Bus"],
   },
   {
     id: 38,
     question: "¿Qué significan la siglas LAN en español?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Red de área local",
     incorrect_answers: [
       "Red de area nacional",
@@ -363,7 +363,7 @@ export const questions = [
   {
     id: 39,
     question: "¿Qué significan la siglas WAN en español?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Red de área amplia",
     incorrect_answers: [
       "Red de area local",
@@ -374,7 +374,7 @@ export const questions = [
   {
     id: 40,
     question: "¿Qué significan las siglas WLAN en español?",
-    category: "ofimatica",
+    category: "ofimatica-3RO",
     correct_answer: "Red de área local inalámbrica",
     incorrect_answers: [
       "Red de area local web",
@@ -385,7 +385,7 @@ export const questions = [
   {
   id: 41,
   question: "¿Para qué sirve la Papelera de reciclaje de Windows?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Almacenar temporalmente archivos eliminados",
   incorrect_answers: [
     "Guardar copias de seguridad automáticamente",
@@ -396,7 +396,7 @@ export const questions = [
 {
   id: 42,
   question: "¿Qué combinación de teclas se utiliza normalmente para copiar un archivo o texto?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Ctrl + C",
   incorrect_answers: [
     "Ctrl + V",
@@ -407,7 +407,7 @@ export const questions = [
 {
   id: 43,
   question: "¿Qué combinación de teclas se utiliza para pegar un elemento que previamente fue copiado?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Ctrl + V",
   incorrect_answers: [
     "Ctrl + C",
@@ -418,7 +418,7 @@ export const questions = [
 {
   id: 44,
   question: "¿Qué combinación de teclas permite deshacer la última acción realizada?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Ctrl + Z",
   incorrect_answers: [
     "Ctrl + Y",
@@ -429,7 +429,7 @@ export const questions = [
 {
   id: 45,
   question: "¿Qué herramienta de Windows permite explorar y administrar archivos y carpetas?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Explorador de archivos",
   incorrect_answers: [
     "Administrador de tareas",
@@ -440,7 +440,7 @@ export const questions = [
 {
   id: 46,
   question: "¿Qué sucede normalmente cuando se presiona la tecla F2 sobre un archivo seleccionado en Windows?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Permite cambiar el nombre del archivo",
   incorrect_answers: [
     "Abre el archivo",
@@ -451,7 +451,7 @@ export const questions = [
 {
   id: 47,
   question: "¿Cuál de las siguientes opciones representa correctamente una extensión de archivo de Microsoft Word?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: ".docx",
   incorrect_answers: [
     ".xlsx",
@@ -462,7 +462,7 @@ export const questions = [
 {
   id: 48,
   question: "¿Cuál es la extensión de archivo utilizada normalmente por Microsoft Excel?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: ".xlsx",
   incorrect_answers: [
     ".docx",
@@ -473,7 +473,7 @@ export const questions = [
 {
   id: 49,
   question: "¿Cuál es la extensión de archivo utilizada normalmente por Microsoft PowerPoint?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: ".pptx",
   incorrect_answers: [
     ".docx",
@@ -484,7 +484,7 @@ export const questions = [
 {
   id: 50,
   question: "¿Qué combinación de teclas se utiliza normalmente para seleccionar todo el contenido de un documento?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Ctrl + A",
   incorrect_answers: [
     "Ctrl + S",
@@ -495,7 +495,7 @@ export const questions = [
 {
   id: 51,
   question: "En Microsoft Word, ¿qué opción permite hacer que un texto aparezca más oscuro y resaltado?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Negrita",
   incorrect_answers: [
     "Cursiva",
@@ -506,7 +506,7 @@ export const questions = [
 {
   id: 52,
   question: "En Microsoft Word, ¿qué alineación hace que el texto quede ajustado tanto al margen izquierdo como al derecho?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Justificada",
   incorrect_answers: [
     "Izquierda",
@@ -517,7 +517,7 @@ export const questions = [
 {
   id: 53,
   question: "¿Para qué sirve la opción 'Guardar como' en un documento de Word?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Guardar una copia con otro nombre, ubicación o formato",
   incorrect_answers: [
     "Cerrar el documento sin guardarlo",
@@ -528,7 +528,7 @@ export const questions = [
 {
   id: 54,
   question: "En Microsoft Excel, ¿cómo se identifica normalmente una celda?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Con una letra y un número, por ejemplo A1",
   incorrect_answers: [
     "Con dos números, por ejemplo 11",
@@ -539,7 +539,7 @@ export const questions = [
 {
   id: 55,
   question: "En Excel, ¿con qué símbolo comienza normalmente una fórmula?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "=",
   incorrect_answers: [
     "+",
@@ -550,7 +550,7 @@ export const questions = [
 {
   id: 56,
   question: "¿Qué función de Excel permite sumar los valores de un grupo de celdas?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "SUMA",
   incorrect_answers: [
     "PROMEDIO",
@@ -561,7 +561,7 @@ export const questions = [
 {
   id: 57,
   question: "¿Qué función de Excel permite obtener el promedio de varios valores?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "PROMEDIO",
   incorrect_answers: [
     "SUMA",
@@ -572,7 +572,7 @@ export const questions = [
 {
   id: 58,
   question: "¿Qué representa el rango A1:A5 en Excel?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "El conjunto de celdas desde A1 hasta A5",
   incorrect_answers: [
     "Solamente la celda A1",
@@ -583,7 +583,7 @@ export const questions = [
 {
   id: 59,
   question: "¿Qué herramienta de Excel permite organizar datos de menor a mayor o de mayor a menor?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Ordenar",
   incorrect_answers: [
     "Combinar celdas",
@@ -594,7 +594,7 @@ export const questions = [
 {
   id: 60,
   question: "¿Qué elemento de PowerPoint representa cada una de las páginas de una presentación?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Diapositiva",
   incorrect_answers: [
     "Celda",
@@ -605,7 +605,7 @@ export const questions = [
 {
   id: 61,
   question: "¿Qué es una transición en PowerPoint?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "El efecto que ocurre al pasar de una diapositiva a otra",
   incorrect_answers: [
     "El movimiento de un texto dentro de una diapositiva",
@@ -616,7 +616,7 @@ export const questions = [
 {
   id: 62,
   question: "¿Qué es una animación en PowerPoint?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Un efecto aplicado a un objeto dentro de una diapositiva",
   incorrect_answers: [
     "Un efecto entre dos diapositivas",
@@ -627,7 +627,7 @@ export const questions = [
 {
   id: 63,
   question: "¿Cuál es la principal diferencia entre una transición y una animación en PowerPoint?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "La transición ocurre entre diapositivas y la animación sobre objetos de una diapositiva",
   incorrect_answers: [
     "La transición solo funciona con imágenes y la animación solo con texto",
@@ -638,7 +638,7 @@ export const questions = [
 {
   id: 64,
   question: "¿Qué tecla permite iniciar una presentación de PowerPoint desde el principio?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "F5",
   incorrect_answers: [
     "F1",
@@ -649,7 +649,7 @@ export const questions = [
 {
   id: 65,
   question: "¿Qué es un algoritmo?",
-  category: "ofimatica",
+  category: "ofimatica-3RO",
   correct_answer: "Conjunto de pasos ordenados para resolver un problema",
   incorrect_answers: [
     "Un programa informático escrito exclusivamente en un lenguaje de alto nivel para ser ejecutado en la nube.",
@@ -667,22 +667,143 @@ export const questions = [
 {
   id: 67,
   question: "¿Qué programa se usa para navegar en Internet?",
-  category: "ofimatica-1RO",
+  category: "ofimatica-3RO",
   correct_answer: "Navegador",
   incorrect_answers: ["Microsoft Word", "Microsoft Excel", "Paint"],
 },
 {
   id: 68,
   question: "¿Cuáles son las tres características principales de un algoritmo?",
-  category: "ofimatica-2DO",
+  category: "ofimatica-3RO",
   correct_answer: "Finito, Preciso, Inicio y fin",
   incorrect_answers: ["Preciso, Infinito, Inicio", "Infinito, Ambiguo, Fin", "Inicio, Fin, Finito"],
 },
 {
   id: 69,
   question: "Es la represntación gráfica de un algoritmo.",
-  category: "ofimatica-2DO",
+  category: "ofimatica-3RO",
   correct_answer: "Diagamra de flujo",
   incorrect_answers: ["Mapa Conceptual", "Diagrama de estados", "Gráfica de un algoritmo"],
-}
+},
+{
+  id: 70,
+  question: "En un algoritmo, ¿qué es una variable?",
+  category: "ofimatica-3RO",
+  correct_answer: "Un espacio donde se almacena un dato que puede cambiar durante la ejecución del algoritmo",
+  incorrect_answers: [
+    "Una instrucción que siempre se ejecuta de la misma manera",
+    "Un dispositivo físico que permite ejecutar el algoritmo",
+    "Un conjunto de pasos que se utilizan para resolver un problema",
+  ],
+},
+{
+  id: 71,
+  question: "En un algoritmo, ¿cuál de los siguientes es un operador matemático?",
+  category: "ofimatica-3RO",
+  correct_answer: "+",
+  incorrect_answers: [
+    "=",
+    "&&",
+    "==",
+  ],
+},
+{
+  id: 72,
+  question: "¿Qué operación realiza el operador % en un algoritmo?",
+  category: "ofimatica-3RO",
+  correct_answer: "Obtiene el residuo de una división",
+  incorrect_answers: [
+    "Realiza una suma",
+    "Realiza una multiplicación",
+    "Compara dos valores",
+  ],
+},
+{
+  id: 73,
+  question: "En un algoritmo, ¿qué significa normalmente el operador de asignación =?",
+  category: "ofimatica-3RO",
+  correct_answer: "Asignar un valor a una variable",
+  incorrect_answers: [
+    "Comparar dos valores",
+    "Realizar una suma",
+    "Indicar que dos valores son diferentes",
+  ],
+},
+{
+  id: 74,
+  question: "Si en un algoritmo encontramos la instrucción edad = 14, ¿qué significa?",
+  category: "ofimatica-3RO",
+  correct_answer: "Asignar el valor 14 a la variable edad",
+  incorrect_answers: [
+    "Comparar edad con el número 14",
+    "Sumar 14 a la variable edad",
+    "Comprobar si edad es diferente de 14",
+  ],
+},
+{
+  id: 75,
+  question: "¿Para qué se utilizan principalmente los operadores lógicos en un algoritmo?",
+  category: "ofimatica-3RO",
+  correct_answer: "Para combinar o evaluar condiciones",
+  incorrect_answers: [
+    "Para almacenar información en una variable",
+    "Para realizar únicamente operaciones matemáticas",
+    "Para cambiar el nombre de un archivo",
+  ],
+},
+{
+  id: 76,
+  question: "¿Cuál de los siguientes es un operador lógico?",
+  category: "ofimatica-3RO",
+  correct_answer: "&&",
+  incorrect_answers: [
+    "+",
+    "=",
+    "%",
+  ],
+},
+{
+  id: 77,
+  question: "¿Cuál de los siguientes es el operador lógico Y (AND)",
+  category: "ofimatica-3RO",
+  correct_answer: "&&",
+  incorrect_answers: [
+    "!=",
+    "==",
+    "||",
+  ],
+},
+{
+  id: 78,
+  question: "¿Cuál de los siguientes es el operador lógico O (OR)",
+  category: "ofimatica-3RO",
+  correct_answer: "&&",
+  incorrect_answers: [
+    "!=",
+    "==",
+    "||",
+  ],
+},
+{
+  id: 79,
+question: "Observa la expresión: edad == 15. ¿Qué está haciendo el algoritmo",
+  category: "ofimatica-3RO",
+  correct_answer: "Comprobando si edad es igual a 15",
+  incorrect_answers: [
+    "Comprobando si edad es mayor o igual a 15",
+    "Asignado 15 a la variable edad",
+    "Comprobando si edad es menor o igual a 15",
+  ],
+},
+{
+  id: 80,
+  question: "Observa la expresión: edad >= 12. ¿Qué está haciendo el algoritmo?",
+  category: "ofimatica-3RO",
+  correct_answer: "Comprobando si edad es mayor o igual a 12",
+  incorrect_answers: [
+    "Asignando 12 a la variable edad",
+    "Sumando 12 a la variable edad",
+    "Comprobando si edad es menor que 12",
+  ],
+},
 ];

@@ -18,6 +18,8 @@ import TestResults from "./pages/TestsResults";
 import TestsTec47Emocional from "./pages/TestsTec47Emocional";
 import Footer from "./components/Footer";
 import StudentsList from "./components/StudentList";
+import QuizOfiPage from "./pages/QuizOfiPage";
+import QuizOfiTeacherPage from "./pages/QuizOfiTeacherPage";
 
 function App() {
   const { isLoggedIn } = useContext(AuthContext);
@@ -37,12 +39,19 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/register/evaluations" element={<StudentRegister tipo='estilos'/>} />
               <Route path="/register/socioemotional" element={<StudentRegister tipo='socioemocional'/>} />
+              <Route path="/register/ofimatica" element={<StudentRegister tipo='ofimatica'/>} />
               <Route path="/evaluations" element={<TestsTec47 />} />
               <Route path="/evaluations/:category" element={<TestPage />} />
               <Route path="/evaluations/testsresults" element={<TestResults />} />
               <Route path="/socioemotional" element={<TestsTec47Emocional />} />
               <Route path="/socioemotional/:category" element={<TestPage />} />
               <Route path="/results" element={<StudentsList />} />
+              <Route path="/quizz" element={<QuizOfiPage />} />
+              <Route path="/quizz/:category" element={<QuizPage />} />
+              <Route
+                path="/quizz/teacher"
+                element={<IsPrivate> <QuizOfiTeacherPage /> </IsPrivate>}
+              />
               <Route
                 path="/tests"
                 element={<IsPrivate> <Tests /> </IsPrivate>}

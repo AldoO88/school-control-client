@@ -55,6 +55,11 @@ const Home = () => {
               Test Socioemocionales
             </button>
           </Link>
+          <Link to="/register/ofimatica">
+            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded transition">
+              Quiz de Ofimática
+            </button>
+          </Link>
           <Link to="/about">
             <button className="w-full bg-[#621333] hover:bg-[#4a0f27] text-white font-semibold py-3 rounded transition">
               Acerca de la Escuela

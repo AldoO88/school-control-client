@@ -11,7 +11,7 @@ const initStudentInfoForm = {
 };
 
 const StudentRegister = ( { tipo } ) => {
-  const { studentId, updateStudentId } = useContext(StudentContext);
+  const { studentId, updateStudentId, updateGrade } = useContext(StudentContext);
   const [ studentInfoForm, setStudentInfoForm ] = useState(initStudentInfoForm);
   const [ errorMessage, setErrorMessage ] = useState(undefined);
 
@@ -30,19 +30,21 @@ const StudentRegister = ( { tipo } ) => {
       const response = await studentsService.createStudent(studentInfoForm);
       const idStudent = response.data._id;
       updateStudentId(idStudent);
-      console.log(studentId);
-      if(tipo==='estilos') navigate("/evaluations");
-      if(tipo==='socioemocional') navigate("/socioemotional");
-    } catch (error) {
-      console.error("error", error);
-      setErrorMessage(error.response.data.message);
-    }
-  };
+      updateGrade(studentInfoForm.grade);
+    if(tipo==='estilos') navigate("/evaluations");
+    if(tipo==='socioemocional') navigate("/socioemotional");
+    if(tipo==='ofimatica') navigate("/quizz");
+  } catch (error) {
+    console.error("error", error);
+    setErrorMessage(error.response.data.message);
+  }
+};
 
-  useEffect(() => {
+useEffect(() => {
     if (studentId) {
       if(tipo==='estilos') navigate("/evaluations");
       if(tipo==='socioemocional') navigate("/socioemotional");
+      if(tipo==='ofimatica') navigate("/quizz");
     }
   }, [studentId, navigate, tipo]);
 
