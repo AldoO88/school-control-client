@@ -13,25 +13,32 @@ const defaultTest = {
 
 const QuizOfi = ( { questions, category, title1, text, title2, instructions } ) => {
   const [questionsGroup, setQuestionsGroup] = useState([]);
-  const [answered, setAnswered] = useState([]);
+  const [answered, setAnswered] = useState({});
   const [currentBatch, setCurrentBatch] = useState(0);
   const [activeQuiz, setActiveQuiz] = useState(false);
   const [finished, setFinished] = useState(false);
-  const [score, setScore] = useState(0);
   
   const batchSize = 10;
+
+  const calculateScore = (answers) => {
+    return questions.reduce((count, question) => {
+      const selected = answers[question.id]?.selectedOption;
+      return selected && selected === question.correct_answer ? count + 1 : count;
+    }, 0);
+  };
+
+  const score = calculateScore(answered);
 
   useEffect(() => {
     const startIndex = currentBatch * batchSize;
     const endIndex = startIndex + batchSize;
     const selectedQuestions = questions.slice(startIndex, endIndex);
 
-    // Crear una lista de respuestas combinadas y barajarlas
     const updatedQuestions = selectedQuestions.map((question) => {
       const allAnswers = [
         ...question.incorrect_answers,
         question.correct_answer,
-      ].sort(() => Math.random() - 0.5); // Barajar respuestas
+      ].sort(() => Math.random() - 0.5);
 
       return {
         ...question,
@@ -43,9 +50,6 @@ const QuizOfi = ( { questions, category, title1, text, title2, instructions } ) 
   }, [currentBatch, questions]);
 
   const handleAnswerChange = (questionId, answer) => {
-    const currentQuestion = questions.find((q) => q.id === questionId);
-    const previousAnswer = answered[questionId]?.selectedOption;
-
     setAnswered((prevAnswers) => ({
       ...prevAnswers,
       [questionId]: {
@@ -53,16 +57,6 @@ const QuizOfi = ( { questions, category, title1, text, title2, instructions } ) 
         selectedIndex: 1
       }
     }));
-
-    // Ajustar el score: decrementar si la respuesta anterior era correcta
-    const previousWasCorrect = previousAnswer && currentQuestion.correct_answer === previousAnswer;
-    const newIsCorrect = currentQuestion.correct_answer === answer;
-
-    if (previousWasCorrect && !newIsCorrect) {
-      setScore((prevScore) => prevScore - 1);
-    } else if (!previousWasCorrect && newIsCorrect) {
-      setScore((prevScore) => prevScore + 1);
-    }
   };
 
   const handleNextBatch = () => {

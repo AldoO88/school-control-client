@@ -53,7 +53,7 @@ export const testPeter = {
     },
     {
       id: 12,
-      question: 'Cuando escucho una nueve idea enseguida comienzo a pensar cómo ponerla en práctica.',
+      question: 'Cuando escucho una nueva idea enseguida comienzo a pensar cómo ponerla en práctica.',
     },
     {
       id: 13,

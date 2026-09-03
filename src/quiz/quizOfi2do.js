@@ -777,11 +777,11 @@ export const questions = [
   id: 78,
   question: "¿Cuál de los siguientes es el operador lógico O (OR)",
   category: "ofimatica-2DO",
-  correct_answer: "&&",
+  correct_answer: "||",
   incorrect_answers: [
     "!=",
     "==",
-    "||",
+    "&&",
   ],
 },
 {
